@@ -15,4 +15,14 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  features {}
+  resource_provider_registrations = "none"
+  subscription_id  = "9734ed68-621d-47ed-babd-269110dbacb1"
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = "1-b6ec31fc-playground-sandbox"
+  location = "eastus"
+}
 
