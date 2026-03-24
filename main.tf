@@ -7,12 +7,16 @@ terraform {
       version = ">= 3.43.0"
     }
   }
-  cloud {
-    organization = "igw"
-    workspaces {
-      name = "TerraformCI"
-    }
-  }
+
+  cloud { 
+    
+    organization = "igw" 
+
+    workspaces { 
+      name = "TerraformCI" 
+    } 
+  } 
+
 }
 
 provider "azurerm" {
