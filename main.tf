@@ -27,9 +27,9 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "storagemyvm1"
+  name                     = "storagemyvm2"
   location                 = "eastus"
-  resource_group_name      = "azurerm_resource_group.rg.name"
+  resource_group_name      = "811-1df69570-provide-continuous-delivery-with-gith"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
