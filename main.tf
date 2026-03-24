@@ -10,7 +10,7 @@ terraform {
   cloud {
     organization = "igw"
     workspaces {
-      name = "TerraformCI-C"
+      name = "TerraformCI"
     }
   }
 }
@@ -22,14 +22,14 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "811-1df69570-provide-continuous-delivery-with-gith"
-  location = "southcentralus"
+  name     = "1-b6ec31fc-playground-sandbox"
+  location = "eastus"
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "storagemyvm2"
-  location                 = "eastus"
-  resource_group_name      = "811-1df69570-provide-continuous-delivery-with-gith"
+  name                     = "storagemyvm1"
+  location                 = azurerm_resource_group.rg.location
+  resource_group_name      = azurerm_resource_group.rg.name
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
