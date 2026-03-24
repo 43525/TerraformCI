@@ -18,11 +18,11 @@ terraform {
 provider "azurerm" {
   features {}
   resource_provider_registrations = "none"
-  subscription_id                 = "80ea84e8-afce-4851-928a-9e2219724c69"
+  subscription_id                 = "9734ed68-621d-47ed-babd-269110dbacb1"
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "1-b86e2a51-playground-sandbox"
+  name     = "811-1df69570-provide-continuous-delivery-with-gith"
   location = "southcentralus"
 }
 
