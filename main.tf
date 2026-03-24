@@ -10,7 +10,7 @@ terraform {
   cloud {
     organization = "igw"
     workspaces {
-      name = "TerraformCI"
+      name = "TerraformCI-C"
     }
   }
 }
